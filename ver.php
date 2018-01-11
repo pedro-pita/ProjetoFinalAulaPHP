@@ -28,7 +28,7 @@
 		</div>
 		<main class="imoveis">
 			<article>
-				<img alt="casa2" src="./img/casa2.jpg" title="casa2">
+				<img alt="Casa com salão" src="./img/casa2.jpg" title="Casa com salão">
 				<h2>Casa com salão</h2>
 				<a href="ver.php">Mais Informações</a>
 			</article>

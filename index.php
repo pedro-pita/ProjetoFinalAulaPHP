@@ -23,27 +23,27 @@
 		</section>
 		<div class="admin">
 			<a href="admin.php">
-				<img alt="admin" src="./img/adminPHP.png" >
+				<img alt="admin" src="./img/admin.png" >
 			</a>
 		</div>
 		<main class="imoveis">
 			<article>
-				<img alt="casa2" src="./img/casa2.jpg" title="casa2">
+				<img alt="Casa com salão" src="./img/casa2.jpg" title="Casa com salão">
 				<h2>Casa com salão</h2>
 				<a href="ver.php">Mais Informações</a>
 			</article>
 			<article>
-				<img alt="casa2" src="./img/casa2.jpg" title="casa2">
+				<img alt="Casa com salão" src="./img/casa2.jpg" title="Casa com salão">
 				<h2>Casa com salão</h2>
 				<a href="ver.php">Mais Informações</a>
 			</article>
 			<article>
-				<img alt="casa2" src="./img/casa2.jpg" title="casa2">
+				<img alt="Casa com salão" src="./img/casa2.jpg" title="Casa com salão">
 				<h2>Casa com salão</h2>
 				<a href="ver.php">Mais Informações</a>
 			</article>
 			<article>
-				<img alt="casa2" src="./img/casa2.jpg" title="casa2">
+				<img alt="Casa com salão" src="./img/casa2.jpg" title="Casa com salão">
 				<h2>Casa com salão</h2>
 				<a href="ver.php">Mais Informações</a>
 			</article>
