@@ -6,7 +6,7 @@ $host = $_SERVER['HTTP_HOST'];//localhost
 $uri = rtrim(dirname($_SERVER['PHP_SELF']),"/\\");
 $extra = "restritoAdmin.php";
 define('HOME_URL',"http://$host$uri/$extra");
-//passe
+                                             //passe
 $connection = mysqli_connect('localhost','root','','projeto') or trigger_error(mysql_error());
 /*Atributos nativos - global*/
 $altImg;
@@ -20,7 +20,7 @@ if(isset($_POST['edit'])){
     $imovel = validarImovel($_POST['edit']);
     validarForm($imovel);
 }
-if(isset($_POST['save']) && isset($_POST['form_imovel_alt']) && $_POST['form_imovel_decricao'] != ''){
+if(isset($_POST['save']) && isset($_POST['form_imovel_alt']) && $_POST['form_imovel_descricao'] != ''){
     saveImovel($_POST['save']);
 }
 /* Métodos da aplicacao*/
@@ -72,11 +72,11 @@ function saveImovel($imovelID){
         if(!$query){
             echo '<p><b>Daata has not update!!!!!!</b></p>';
             //termina rotina
-            return;
+            return;           
         }else{
             echo '<p><b>Imovel successfully updated !!!!!!</b></p>';
                 //terminar rotina
-            return;
+                return;
         }
     }
 }
@@ -95,9 +95,9 @@ function deleteImovel($imovelID) {
         }
         //Redirecionamento para página inicial
         /*
-         echo '<meta http-equiv="Refresh" content="0; url=' . HOME_URL .'">';
-         echo '<script type="text/javascript"> window.location.href = "' . HOME_URL . '";</script>';
-         */
+        echo '<meta http-equiv="Refresh" content="0; url=' . HOME_URL .'">';
+        echo '<script type="text/javascript"> window.location.href = "' . HOME_URL . '";</script>';
+        */
     }
 }
 
@@ -121,7 +121,7 @@ function insertImovel(){
 //método de captura da lista de imoveis
 function get_imoveis_list(){
     global $connection;
-    $sql = "SELECT * FROM ´imovei´ ORDER BY id DESC";
+    $sql = "SELECT * FROM `imovel` ORDER BY id DESC";
     $query = mysqli_query($connection, $sql);
     if(mysqli_num_rows($query) > 0){
         //persistir dados retornados para a var resultado
@@ -149,7 +149,7 @@ function get_imovel($imovelID){
         exit;
     }
 }
-
+    
 
 
 ?>
