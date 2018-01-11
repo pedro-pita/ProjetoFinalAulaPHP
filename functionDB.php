@@ -25,7 +25,7 @@ if(isset($_POST['save']) && isset($_POST['form_imovel_alt']) && $_POST['form_imo
 }
 /* Métodos da aplicacao*/
 function validarImovel($imovelID){
-    global $conection;
+    global $connection;
     $sql = "SELECT * FROM `imovel` WHERE `id` = '$imovelID'";
     $db_check_imovel = mysqli_query($connection,$sql) or die(mysqli_error($connection));
     if(!$db_check_imovel){
@@ -105,9 +105,9 @@ function deleteImovel($imovelID) {
 function insertImovel(){
     global $connection;
     //variaveis passadas via formulario pelo metodo post
-    $altImg    = $_Post['form_imovel_alt'];
-    $descricao = $_Post['form_imovel_descricao'];
-    $imgPath   = $_Post['form_imovel_img'];
+    $altImg    = $_POST['form_imovel_alt'];
+    $descricao = $_POST['form_imovel_descricao'];
+    $imgPath   = $_POST['form_imovel_img'];
     //executar a consulta
     $sql = "INSERT INTO `imovel` (altImg, descricao, imgPath) VALUES ('$altImg','$descricao','$imgPath')";
     if($connection->query($sql) === TRUE){
