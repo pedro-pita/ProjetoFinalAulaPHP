@@ -16,24 +16,35 @@
 	</head>
 	<body>
 		<header class="header">
-			<img src="./img/logo.png" alt="logo" width="50px" height="50px">
+			<img src="./img/logo.png" alt="logo"/>
 		</header>
 		<section class="section_banner">
-			<h1>Aqui encontras as melhores casas</h1>
+			<h1>Albuns de Rap Tuga</h1>
 		</section>
 		<div class="admin">
 			<a href="admin.php">
 				<img alt="admin" src="./img/admin.png" >
 			</a>
 		</div>
+		<?
+	       include_once './functionDB.php';
+    	       if(empty($_GET['id'])){
+    	           header("Location: index.php");
+    	           exit;
+    	       }
+	   ?>
+	   <?
+	       //recuperar imovel
+	       //$id = $_GET['id']
+	       $lista_imovel = get_imovel($_GET['id']);
+	   ?>
 		<main class="imoveis">
 			<article>
-				<img alt="Casa com salão" src="./img/casa2.jpg" title="Casa com salão">
-				<h2>Casa com salão</h2>
-				<a href="ver.php">Mais Informações</a>
+				<img alt="<? echo $lista_imovel['id'] ?>" src="<? echo $lista_imovel['imgPath']; ?>" title=<? echo $lista_imovel['altImg']; ?>>
+				<h2><? echo $lista_imovel['altImg'] ?></h2>
 			</article>
 		</main>
-		<div wrapper="wrapper">
+		<div class="wrapper">
 			<div>
 				<a href="index.php">
 					<img alt="" src="./img/arrow.png">
